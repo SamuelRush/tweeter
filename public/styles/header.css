@@ -1,0 +1,18 @@
+header {
+  width: 100%;
+  height: 400px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffa500;
+}
+/* .header__profilePic {
+background-color: #008c41;
+background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+} */
+
+.header__nameID {
+  text-align: center;
+  display: block;
+} 

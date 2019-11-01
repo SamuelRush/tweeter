@@ -13,6 +13,8 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css"/>
     <link rel="stylesheet" href="/styles/nav.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/header.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -27,7 +29,27 @@
       <span class="nav__logo">tweeter</span>
     </nav>
 
+    <header>
+      <div>
+          <img class="header__profilePic" src="/images/profile-hex.png"> 
+      <!-- </div>
+      <br>
+      <div> -->
+          <h2 class="header__nameID">Your Name</h2>
+      </div>
+  </header>
+  
+
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+        <section class="new-tweet__new-tweet">
+            <h2>Compose Tweet</h2>
+            <form>
+              <textarea class="tweetInput__new-tweet" name="text" placeholder="What are you humming about?"></textarea><br>
+              <input class="submitHit__new-tweet" type="submit" value="Tweet">
+              <span class="counter__new-tweet">140</span>
+            </form>
+          </section>
+    </main>
   </body>
 </html>

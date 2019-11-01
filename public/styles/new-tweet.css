@@ -1,0 +1,20 @@
+.tweetInput__new-tweet{
+  border:none;
+  border-bottom: 5px solid black;
+  width: 100%;
+  background:transparent;
+  outline:none;
+  color: black;
+  font-family: 'Source Sans Pro:600i', sans-serif;
+}
+
+.submitHit__new-tweet {
+  background-color: #4056A1;
+  font-family: 'Bungee', sans-serif;
+  color: #FFFFFF;
+  align-items: left;
+}
+
+.counter__new-tweet{
+  float:right;
+}
