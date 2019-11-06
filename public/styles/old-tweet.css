@@ -1,0 +1,47 @@
+article{
+  border: 5px solid black;
+  padding: 0.5em;
+}
+
+.hover {
+  box-shadow: 10px 10px 5px grey;
+}
+
+.hover .username__old-tweet{
+  color:black
+}
+
+.userName__old-tweet{
+  font-weight:normal;
+  font-size: 20px;
+  font-family: 'Source Sans Pro:600i', sans-serif;
+}
+
+.profPic__old-tweet{
+  height: 60px;
+  width: 60px;
+}
+
+.tweet__old-tweet{
+  padding-left: 10px;
+  padding-bottom: 15px;
+  border-bottom: solid;
+  font-family: 'Source Sans Pro:600i', sans-serif;
+}
+
+.username__old-tweet{
+  float:right;
+  font-weight:normal;
+  font-size: 20px;
+  font-family: 'Source Sans Pro:600i', sans-serif;
+  color: rgb(145, 194, 201);
+  }
+
+.timeago__old-tweet{
+ font-size: small;
+}
+
+.cornerpix__old-tweet{
+  float:right;
+  font-size: medium;
+}
