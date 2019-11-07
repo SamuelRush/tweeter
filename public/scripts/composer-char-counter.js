@@ -13,13 +13,4 @@ $(document).ready(() => {
     $('.counter__new-tweet').text(xTriggered);
   });
 
-  $("article").hover(
-    function() {
-      $( this ).addClass( "hover" );
-    }, function() {
-      $( this ).removeClass( "hover" );
-    }
-  );
-
-
 });

@@ -4,30 +4,12 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 
   function createTweetElement(tweetData){
     let dateNow = Date.now();
@@ -40,12 +22,13 @@ const data = [
     //hours = hours-(days*24);
     //minutes = minutes-(days*24*60)-(hours*60);
     //seconds = seconds-(days*24*60*60)-(hours*60*60)-(minutes*60);
-  return `
+  
+    return `
     <article>
     <h3>
       <p> <img class= "profPic__old-tweet" src ="${tweetData.user.avatars}"> ${tweetData.user.name} <span class = "username__old-tweet"> ${tweetData.user.handle}</span></p>
     </h3>
-    <p class="tweet__old-tweet">${tweetData.content.text}<br></p>
+    <p class="tweet__old-tweet">${escape(tweetData.content.text)}<br></p>
     <footer>
       <p class="timeago__old-tweet">${days} days ago
         <span class="cornerpix__old-tweet">
@@ -60,10 +43,43 @@ const data = [
   }
 
 function renderTweets(data){
+  $('.tweetHolder__old-tweet').remove()
+  $('.placeholder').append(`
+  <section class = "tweetHolder__old-tweet">
+  </section>`);
   data.forEach((tweet) => {
-    console.log(tweet)
-    $('.tweetHolder__old-tweet').append(createTweetElement(tweet))
+    $('.tweetHolder__old-tweet').prepend(createTweetElement(tweet))
   })
 }
+const loadTweets = function () {
+  $.ajax('http://localhost:8080/tweets', { method: 'GET' })
+    .then(renderTweets);
+}
 
-renderTweets(data);
+$(document).ready(function() {
+  loadTweets()
+
+  $('#formSubmission').submit(function(e){
+    e.preventDefault();
+    const $newTweet = $('.tweetInput__new-tweet')
+    const inputValue = $newTweet.val();
+    if (inputValue === "" || inputValue === null || inputValue.length > 140) {
+      if (inputValue.length > 140) {
+        alert("Tweet is too long...")
+      } else { 
+        alert("There is no tweet to post!")
+      }
+    } else {
+      console.log('Button clicked, performing ajax call...');
+      $.post(`http://localhost:8080/tweets`, $(this).serialize(), (post) => {
+        let newName = $('.header__nameID')
+        let newText = this.text
+        post.user = newName;
+        post.text = newText;
+        loadTweets();
+        $('.tweetInput__new-tweet').val("")
+        $('.counter__new-tweet').text("140")
+      });
+    }
+  });
+});
