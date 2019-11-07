@@ -13,4 +13,10 @@ $(document).ready(() => {
     $('.counter__new-tweet').text(xTriggered);
   });
 
+  $('.arrow').on('click', function(e){
+    e.preventDefault();
+    $('.new-tweet__new-tweet').toggle()
+    $('.tweetInput__new-tweet').focus()
+  });
+
 });

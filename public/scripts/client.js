@@ -47,6 +47,7 @@ function renderTweets(data){
   $('.placeholder').append(`
   <section class = "tweetHolder__old-tweet">
   </section>`);
+  $('.errorAlert').text("")
   data.forEach((tweet) => {
     $('.tweetHolder__old-tweet').prepend(createTweetElement(tweet))
   })
@@ -65,9 +66,9 @@ $(document).ready(function() {
     const inputValue = $newTweet.val();
     if (inputValue === "" || inputValue === null || inputValue.length > 140) {
       if (inputValue.length > 140) {
-        alert("Tweet is too long...")
+        $('.errorAlert').text("Tweet is too long...")
       } else { 
-        alert("There is no tweet to post!")
+        $('.errorAlert').text("There is no tweet to post!")
       }
     } else {
       console.log('Button clicked, performing ajax call...');

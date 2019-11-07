@@ -21,3 +21,8 @@
   float:right;
 }
 
+.errorAlert{
+  font-family: 'Source Sans Pro:600i', sans-serif;
+  color: red;
+  font-size: 20px;
+}
