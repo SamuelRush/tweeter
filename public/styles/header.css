@@ -1,23 +1,24 @@
 header {
   width: 100%;
-  height: 400px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #ffa500;
+  margin-top: -25px;
 }
 
 .header__nameID {
   text-align: center;
   display: block;
 } 
+.header__handle{
+  text-align: center;
+  display: block;
+}
 
 /* https://internetingishard.com/html-and-css/responsive-design/ 
 https://github.com/afonsopacifer/awesome-flexbox#readme*/
-
-@media only screen and (max-width: 875px) {
-    
-}
 
 @media only screen and (min-width: 876px) {
   header{

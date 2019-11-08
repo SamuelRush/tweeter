@@ -35,6 +35,7 @@ article:hover .cornerpix__old-tweet{
   padding-bottom: 15px;
   border-bottom: solid;
   font-family: 'Source Sans Pro:600i', sans-serif;
+  word-wrap: break-word;
 }
 
 .username__old-tweet{
