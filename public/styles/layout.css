@@ -36,3 +36,19 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+ @media only screen and (max-width: 875px) {
+    
+}
+@media only screen and (min-width: 876px) {
+  body{
+    width: 75%;
+  }
+  /*.nav__logo{
+    width: 25%;
+  } */
+
+  main {
+    margin-left: 40%;
+    overflow: hidden
+  }
+}

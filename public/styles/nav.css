@@ -33,6 +33,7 @@ span {
 .arrow{
     float: right;
     margin-right: 90px;
+    z-index: 22345;
 }
 .arrow span{
     display: block;
@@ -63,5 +64,16 @@ span {
     100%{
         opacity: 0;
         transform: rotate(45deg) translate(20px,20px);
+    }
+}
+
+@media only screen and (max-width: 875px) {
+    .nav{
+        background-color: #ffa500; 
+    }
+}
+@media only screen and (min-width: 876px) {
+    .nav {
+        width: 99%;
     }
 }

@@ -59,6 +59,7 @@ const loadTweets = function () {
 
 $(document).ready(function() {
   loadTweets()
+  $('.new-tweet__new-tweet').hide();
 
   $('#formSubmission').submit(function(e){
     e.preventDefault();
@@ -83,4 +84,5 @@ $(document).ready(function() {
       });
     }
   });
+
 });

@@ -1,18 +1,41 @@
 header {
   width: 100%;
   height: 400px;
-
   display: flex;
   justify-content: center;
   align-items: center;
   background: #ffa500;
 }
-/* .header__profilePic {
-background-color: #008c41;
-background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
-} */
 
 .header__nameID {
   text-align: center;
   display: block;
 } 
+
+/* https://internetingishard.com/html-and-css/responsive-design/ 
+https://github.com/afonsopacifer/awesome-flexbox#readme*/
+
+@media only screen and (max-width: 875px) {
+    
+}
+
+@media only screen and (min-width: 876px) {
+  header{
+    width: 33%;
+    box-sizing: border-box;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 50%;
+    height: 0px;
+    background: none;
+  }
+  .header__profilePic {
+    width: 100%;
+  }
+  .header__nameID {
+    width: 100%;
+  }
+  .header__headerArea{
+    background: #ffa500; 
+  }
+}

@@ -8,7 +8,15 @@ article:hover {
 }
 
 article:hover .username__old-tweet{
-  color:black
+  color:black;
+}
+
+article:hover .cornerpix__old-tweet{
+  color:black;
+}
+
+.cornerpix__old-tweet{
+  color:#f4f1ec;
 }
 
 .userName__old-tweet{
