@@ -15,7 +15,8 @@ $(document).ready(() => {
 
   $('.arrow').on('click', function(e){
     e.preventDefault();
-    $('.new-tweet__new-tweet').toggle()
+
+    $('.new-tweet__new-tweet').slideToggle("slow");
     $('.tweetInput__new-tweet').focus()
   });
 
