@@ -15,3 +15,26 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Body Parser
+- Chance
+
+## How it Works
+
+- When loaded, you will see a list of tweets already created
+- To add one yourself, click the arrow below 'Write a new tweet'
+  - This will be added to the list of tweets in chronological order starting with the newest tweet
+- To hide the tweet box, just click the arrow again!
+- If user does not have an account, the following information will be created for the user:
+  - a name
+  - an @ Id
+  - a profile picture
+- To focus on a tweet, mouse over it and the user will be able to "flag", "retweet", or "like" (functionality not built)
+- If the webpage is viewed on a smaller webpage it will be restructred to visually fit the page properly
+
+## Cool Features
+- The arrow button moves when the cursor is on it to indicate to the user it can be clicked
+- The tweet box slides in and out when the arrow button is clicked
+- If the tweet is empty or is over 140 characters, the user is notified
+- A button pops up when midway through the page to give the user a quick way to scroll to the top
+- The tweets show time stamps either in seconds, minutes, hours or days
+- Typing 'enter' also submits a tweet
