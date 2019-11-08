@@ -38,3 +38,11 @@ This repository is the starter code for the project: Students will fork and clon
 - A button pops up when midway through the page to give the user a quick way to scroll to the top
 - The tweets show time stamps either in seconds, minutes, hours or days
 - Typing 'enter' also submits a tweet
+
+## Screenshots
+
+![Screenshot of Tweeter when rendered on small browser](https://raw.githubusercontent.com/SamuelRush/tweeter/master/docs/tweetBoxSmall.png)
+
+![Screenshot of Tweeter when rendered on large browser](https://raw.githubusercontent.com/SamuelRush/tweeter/master/docs/tweetBoxBig.png)
+
+![Screenshot of Tweeter when highlighting a tweet, as well as the scroll up arrow](https://raw.githubusercontent.com/SamuelRush/tweeter/master/docs/hightlightAndScrollUp.png)
